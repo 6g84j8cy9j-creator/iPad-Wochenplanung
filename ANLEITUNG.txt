@@ -1,0 +1,64 @@
+WOCHENPLANUNG SCHWERPUNKTE – EIGENSTÄNDIGE iPAD-PWA
+===================================================
+Version 1.0 (iPad-Edition), 20. November 2026
+
+ZWECK
+- Vollständig privater, eigenständiger Kalender für Safari auf dem iPad.
+- Keine Verbindung zum Firmenkalender, keine gemeinsame Datenbasis.
+- Termine und Einstellungen bleiben in einer lokalen IndexedDB-Datenbank auf diesem Gerät.
+- Keine Termindaten werden absichtlich an das Hosting oder einen Cloud-Dienst gesendet.
+- Kein Login, keine externen JavaScript-Bibliotheken oder Analyse-/Trackingdienste.
+
+KOSTENLOSES HTTPS-HOSTING MIT GITHUB PAGES
+1. Bei https://github.com ein kostenloses Konto verwenden oder erstellen.
+2. Neues Repository erstellen, z. B. "ipad-wochenplanung" (Public).
+   ACHTUNG: Bei GitHub Free ist das Repository für Pages öffentlich.
+   Es werden NUR diese Programmdateien veröffentlicht, NIE persönliche Backups.
+3. Diese Dateien ins Stammverzeichnis (Root) des Repositorys hochladen:
+   - index.html
+   - style.css
+   - app.js
+   - sw.js
+   - manifest.webmanifest
+   - icon-192.png
+   - icon-512.png
+   Die Datei ANLEITUNG.txt kannst du ebenfalls hochladen, musst aber nicht.
+4. Im Repository: Settings -> Pages -> Build and deployment ->
+   Source: Deploy from a branch -> Branch: main -> Folder: /(root) -> Save.
+5. Die von GitHub Pages angezeigte HTTPS-Adresse auf dem iPad in Safari öffnen.
+   Üblicherweise: https://BENUTZERNAME.github.io/ipad-wochenplanung/
+6. In Safari das Teilen-Menü öffnen und "Zum Home-Bildschirm" wählen.
+   Falls angeboten "Als Web-App öffnen" aktivieren.
+7. Die App über das neu angelegte Home-Bildschirm-Symbol starten.
+8. Nach dem ersten erfolgreichen Start bei bestehender Verbindung das WLAN
+   ausschalten / Flugmodus aktivieren und den Kalender erneut öffnen:
+   Wochenansicht und lokale Termine sollten weiterhin verfügbar sein.
+
+DATEN UND SICHERUNG
+- Termine werden automatisch lokal auf dem iPad gespeichert (IndexedDB).
+- Die Statusanzeige oben zeigt Erfolg oder einen Speicherfehler an.
+- Über "Backup" -> "Backup exportieren (JSON)" Sicherung speichern.
+- Über "Backup importieren" kann eine ältere Sicherung wiederhergestellt werden.
+  ACHTUNG: Beim Import werden alle vorhandenen Termine und Einstellungen ersetzt.
+- Der Import unterstützt zusätzlich die JSON-Backups der früheren
+  Desktopversionen, sofern das Kalenderformat kompatibel ist.
+- Bei gelöschten Safari/Web-App-Daten oder nach einem Gerätewechsel kann die
+  lokale Datenbank verloren gehen. Bitte regelmässig externe Backups machen.
+- iCloud-Sicherung, Safari-Datenbereinigung und PWA-Speicherverwaltung
+  liegen ausserhalb der Kontrolle dieser Anwendung.
+
+BEDIENUNG
+- Tippen auf leeren Kalendertag: Termin erstellen.
+- Tippen auf Termin: bearbeiten, löschen oder sofort duplizieren.
+- Tippen auf ⧉: Kopie sofort erstellen.
+- Termin kurz gedrückt halten und per Finger in anderen Tag / andere
+  Dienststelle ziehen. Die Uhrzeit bleibt beim Verschieben unverändert.
+- Einstellungsfenster: Dienststellen, Farben, Sichtbarkeit und Schwerpunktliste.
+- PDF-Schaltfläche: systemeigenen Druckdialog von Safari öffnen.
+
+DATENSCHUTZ
+- Der GitHub-Repository-Inhalt und die herunterladbaren Programmdateien sind
+  öffentlich. Der Kalender wird jedoch ohne persönliche Termindaten ausgeliefert.
+- Es erfolgt keine Registrierung von Kalenderdaten auf GitHub Pages.
+- Der Host kann technische Zugriffsprotokolle beim Abruf der Programmdateien haben.
+- Nie ein persönliches JSON-Backup ins öffentliche Repository hochladen.

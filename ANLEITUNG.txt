@@ -92,3 +92,9 @@ Die lokalen Kalenderdaten werden bei einem normalen Versions-Update
 nicht geloescht. Vor dem Update ist ein JSON-Backup empfohlen.
 
 UPDATE 1.2: Beim PDF-Teilen wird nur noch die PDF-Datei übergeben (kein zusaetzlicher Titel, der von iPadOS als Textdatei gespeichert werden kann). Nach dem Hochladen die PWA schliessen und neu starten.
+
+
+Version 1.3: Die Terminerfassung wurde für iPad Safari korrigiert.
+Das Datum steht in einer eigenen Zeile; darunter folgen Beginn und Dauer.
+Bei sehr schmalen Bildschirmen werden die Eingabefelder untereinander angezeigt.
+Die lokale Speicherung bleibt unverändert. Nach GitHub-Upload App schliessen und erneut öffnen.

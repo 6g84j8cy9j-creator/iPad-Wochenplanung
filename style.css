@@ -2,3 +2,12 @@
 @media(max-width:800px){.topbar{padding:10px 13px}.topactions{gap:5px}.brand h1{font-size:17px}main{padding:12px 8px}.navigation h2{font-size:18px}.calendar{min-width:960px}.btn{padding:8px 10px}.save-status{width:100%;text-align:right}}
 @page{size:A3 landscape;margin:11mm}
 @media print{html,body{background:white!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}#app,dialog,.toast,.drag-ghost{display:none!important}#printArea{display:block!important}.print-page{break-after:page}.print-page:last-child{break-after:auto}.print-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:7mm}.print-top h2{margin:0;font-size:18px}.print-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:10px}.print-table th,.print-table td{border:1px solid #bfccda;padding:5px;vertical-align:top;overflow-wrap:anywhere}.print-table thead th{background:#eaf0f8;height:28px}.print-table th:first-child{width:14%}.print-table tbody tr{height:31mm;break-inside:avoid}.print-table tbody th{background:#f5f7fa;text-align:left}.print-event{border-left:3px solid;padding:4px;margin-bottom:4px;break-inside:avoid;border-radius:3px;white-space:pre-wrap;overflow-wrap:anywhere}.print-event strong,.print-event span{display:block}.print-event span{margin-top:3px;font-size:9px}}
+
+/* v1.3: iPad Safari – kein Überlappen der Datums- und Uhrzeitfelder. */
+.fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+.field{min-width:0;max-width:100%}
+.field input,.field select,.field textarea{box-sizing:border-box;min-width:0;max-width:100%;display:block}
+/* Das native iPadOS-Datumsfeld benötigt abhängig von Sprache und Anzeigezoom mehr Platz. */
+.field.date-field{grid-column:1/-1}
+.field input[type=date]{width:100%;min-width:0;max-width:100%}
+@media(max-width:420px){.fields{grid-template-columns:minmax(0,1fr)}.field,.field.wide{grid-column:1/-1}}

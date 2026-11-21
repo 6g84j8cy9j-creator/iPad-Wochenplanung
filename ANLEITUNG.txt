@@ -123,3 +123,18 @@ UPDATE 1.5 – GLEICHE GRÖSSE FÜR DATUM, BEGINN UND DAUER
 - GitHub: Dateien aus dem ZIP ins Stammverzeichnis hochladen und bestehende ersetzen.
 - Safari neu laden; Home-Bildschirm-App vollständig schliessen und neu öffnen.
 - Nicht die Safari-Websitedaten löschen, da dies lokale Termine entfernen kann.
+
+
+UPDATE iPAD VERSION 1.6 – SAFARI-DATUMSFELD
+=========================================
+Das sichtbare Datumsfeld hat nun dieselbe feste Höhe von 42 Pixeln wie
+Beginn und Dauer. Der native iPadOS-Datumsdialog bleibt erhalten:
+Auf das angezeigte Datum tippen, Datum wählen, Auswahl wird angezeigt.
+
+Alle Dateien dieser ZIP-Version im GitHub-Repository ersetzen (insbesondere
+index.html, style.css, app.js und sw.js). Abwarten, bis GitHub Pages die
+Änderung veröffentlicht. Prüfen, ob iPad-Edition v1.6 unter dem Titel steht.
+
+Die automatisch lokal gespeicherten Termine bleiben erhalten. Niemals
+Safari-Websitedaten löschen, um ein Update zu erzwingen: zuerst ein Backup
+erstellen und nur die Anwendung normal neu laden.

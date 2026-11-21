@@ -20,3 +20,53 @@
 #eventDialog .time-fields>.field{min-width:0;max-width:100%}
 #eventDialog #dateField,#eventDialog #startSelect,#eventDialog #durationSelect{display:block;width:100%;max-width:100%;min-width:0;box-sizing:border-box}
 @media(max-width:460px){#eventDialog .fields,#eventDialog .time-fields{grid-template-columns:minmax(0,1fr)}}
+
+/* v1.5: gleich grosse Felder Datum, Beginn und Dauer.
+   Keine nativen iOS-Intrinsic-Grössen dürfen das Grid verbreitern. */
+#eventDialog .date-time-fields {
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:13px;
+  min-width:0;
+  width:100%;
+  align-items:start;
+}
+#eventDialog .date-time-fields>.field {
+  grid-column:auto;
+  min-width:0;
+  width:100%;
+  max-width:100%;
+}
+#eventDialog .date-time-fields input,
+#eventDialog .date-time-fields select {
+  box-sizing:border-box;
+  display:block;
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  height:42px;
+  min-height:42px;
+  max-height:42px;
+  padding:8px 9px;
+  border:1px solid #cbd7e6;
+  border-radius:9px;
+  background:#fff;
+  color:#20334a;
+  font-size:16px;
+  line-height:24px;
+}
+/* Safari/iPadOS stellt eigene Inhalte in nativen date-Inputs dar. */
+#eventDialog #dateField::-webkit-date-and-time-value{
+  min-width:0;
+  width:100%;
+  text-align:left;
+  line-height:24px;
+}
+#eventDialog #dateField::-webkit-datetime-edit{
+  min-width:0;
+  padding:0;
+}
+@media(max-width:540px){
+  #eventDialog .date-time-fields{grid-template-columns:minmax(0,1fr)}
+}

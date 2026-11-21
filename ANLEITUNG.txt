@@ -112,3 +112,14 @@ UPDATE 1.4 – DATUMS- UND BEGINNFELDER
 - WICHTIG: Nicht die Safari-Website-Daten löschen, das kann Termine entfernen.
 - Safari über https://DEINNAME.github.io/DEINREPOSITORY/?v=1.4 neu öffnen,
   dann die Home-Bildschirm-App vollständig schliessen und neu starten.
+
+
+UPDATE 1.5 – GLEICHE GRÖSSE FÜR DATUM, BEGINN UND DAUER
+====================================================
+- Datum, Beginn und Dauer stehen jetzt in drei gleich breiten Spalten.
+- Alle drei Eingabefelder haben eine feste Höhe von 42 Pixeln.
+- Auf schmalen Bildschirmen werden alle drei Felder gleich breit untereinander angezeigt.
+- iPad-Edition v1.5 muss in Safari sichtbar sein.
+- GitHub: Dateien aus dem ZIP ins Stammverzeichnis hochladen und bestehende ersetzen.
+- Safari neu laden; Home-Bildschirm-App vollständig schliessen und neu öffnen.
+- Nicht die Safari-Websitedaten löschen, da dies lokale Termine entfernen kann.

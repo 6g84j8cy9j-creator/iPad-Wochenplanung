@@ -1,4 +1,4 @@
-const CACHE='wochenplanung-ipad-v8';
+const CACHE='wochenplanung-ipad-v9';
 const ASSETS=['./','./index.html','./style.css','./app.js','./pdf.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));

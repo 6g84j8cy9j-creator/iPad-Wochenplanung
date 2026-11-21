@@ -117,3 +117,23 @@
  cursor:pointer;
  z-index:2;
 }
+
+/* v1.7 – zuverlässig sichtbares Datum ohne natives Safari-Datumselement. */
+#eventDialog .date-input-shell #dateDisplay{
+ display:flex;align-items:center;justify-content:flex-start;
+ width:100%;height:100%;border:0;background:transparent;color:#20334a;
+ padding:0 9px;text-align:left;font:inherit;font-size:16px;line-height:24px;
+ cursor:pointer;box-shadow:none;white-space:nowrap;overflow:hidden;
+}
+#eventDialog .date-input-shell #dateDisplay::after{content:'▾';margin-left:auto;color:#5c6f86;font-size:12px}
+#eventDialog .date-picker{grid-column:1 / -1;background:#f7f9fc;border:1px solid #cbd7e6;border-radius:10px;padding:11px;min-width:0;width:100%}
+#eventDialog .date-picker.hidden{display:none!important}
+#eventDialog .date-picker-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:9px}
+#eventDialog .date-picker-head strong{text-transform:capitalize;font-size:14px}
+#eventDialog .date-picker-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;align-items:center}
+#eventDialog .date-picker-weekday{text-align:center;color:#617085;font-size:12px;font-weight:700;padding:6px 0}
+#eventDialog .date-picker-day{border:1px solid transparent;background:white;border-radius:7px;padding:0;min-width:0;min-height:34px;color:#1d304b;font-size:14px;cursor:pointer}
+#eventDialog .date-picker-day.chosen{background:#245cdb;color:white;font-weight:700}
+#eventDialog .date-picker-day:focus-visible{outline:2px solid #245cdb;outline-offset:1px}
+#eventDialog #dateDisplay{pointer-events:auto!important;position:relative;z-index:3}
+#eventDialog #dateField[type="hidden"]{display:none!important;position:static!important}

@@ -98,3 +98,17 @@ Version 1.3: Die Terminerfassung wurde für iPad Safari korrigiert.
 Das Datum steht in einer eigenen Zeile; darunter folgen Beginn und Dauer.
 Bei sehr schmalen Bildschirmen werden die Eingabefelder untereinander angezeigt.
 Die lokale Speicherung bleibt unverändert. Nach GitHub-Upload App schliessen und erneut öffnen.
+
+
+UPDATE 1.4 – DATUMS- UND BEGINNFELDER
+==================================
+- Datum belegt nun konstruktiv eine ganze Formularzeile.
+- Beginn und Dauer stehen in einer separaten Zweiergruppe darunter.
+- Auf schmalen Bildschirmen werden die Felder untereinander dargestellt.
+- Service Worker Version v5; beim Online-Neuladen wird der aktuelle Programmstand verwendet.
+- Sichtbarer Versionshinweis in der Kopfzeile: iPad-Edition v1.4.
+- Keine Kalenderdaten oder Backups in das GitHub-Repository hochladen.
+- Die Datenbank (IndexedDB) bleibt bei normalem Update unverändert.
+- WICHTIG: Nicht die Safari-Website-Daten löschen, das kann Termine entfernen.
+- Safari über https://DEINNAME.github.io/DEINREPOSITORY/?v=1.4 neu öffnen,
+  dann die Home-Bildschirm-App vollständig schliessen und neu starten.

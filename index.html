@@ -14,7 +14,7 @@
   <div class="topactions"><span id="saveStatus" class="save-status" role="status">Speicher wird geprüft …</span><button class="btn" id="backupBtn">↑↓ Backup</button><button class="btn" id="settingsBtn">⚙ Einstellungen</button><button class="btn primary" id="newBtn">+ Neuer Termin</button></div>
 </header>
 <main>
-  <section class="navigation"><div><h2 id="rangeHeading">Kalenderwoche</h2><p id="weekSubtitle" class="subtitle"></p></div><div class="navbuttons"><label>Jahr <select id="yearSelect"></select></label><label>KW <select id="weekSelect"></select></label><button class="btn" id="goBtn">Anzeigen</button><button class="btn icon" id="prevBtn" aria-label="Vorherige Woche">‹</button><button class="btn" id="todayBtn">Heute</button><button class="btn icon" id="nextBtn" aria-label="Nächste Woche">›</button><button class="btn" id="printBtn">▤ PDF</button></div></section>
+  <section class="navigation"><div><h2 id="rangeHeading">Kalenderwoche</h2><p id="weekSubtitle" class="subtitle"></p></div><div class="navbuttons"><label>Jahr <select id="yearSelect"></select></label><label>KW <select id="weekSelect"></select></label><button class="btn" id="goBtn">Anzeigen</button><button class="btn icon" id="prevBtn" aria-label="Vorherige Woche">‹</button><button class="btn" id="todayBtn">Heute</button><button class="btn icon" id="nextBtn" aria-label="Nächste Woche">›</button><button class="btn" id="printBtn">▤ PDF erstellen</button></div></section>
   <div id="storeWarning" class="warning hidden" role="alert"></div>
   <div id="legend" class="legend"></div>
   <div class="calendar-wrap" id="calendarScroll"><div id="calendar" class="calendar" aria-label="Wochenplan"></div></div>
@@ -26,5 +26,5 @@
 <dialog id="backupDialog"><div class="modal-head"><h3>Kalender & Datensicherung</h3><button type="button" class="btn icon" data-close="backupDialog">×</button></div><div class="modal-content"><p>Alle Termine und Einstellungen werden automatisch <strong>nur auf diesem iPad</strong> gespeichert. Der Webserver erhält keine Kalenderdaten.</p><div class="backup-actions"><button id="exportBackupBtn" class="btn primary" type="button">↓ Backup exportieren (JSON)</button><button id="importBackupBtn" class="btn" type="button">↑ Backup importieren</button><input id="fileInput" type="file" accept=".json,application/json" class="hidden"></div><p class="subtitle">Wichtig: Backups regelmässig in der Dateien-App aufbewahren. Beim Löschen der Website-Daten oder der Web-App kann die lokale Datenbank verloren gehen.</p></div></dialog>
 <div id="toast" class="toast hidden" role="status"></div><div id="dragGhost" class="drag-ghost hidden"></div>
 <div id="printArea" aria-hidden="true"></div>
-<script src="app.js" defer></script>
+<script src="pdf.js" defer></script><script src="app.js" defer></script>
 </body></html>

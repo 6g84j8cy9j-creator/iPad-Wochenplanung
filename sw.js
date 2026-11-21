@@ -1,5 +1,5 @@
-const CACHE='wochenplanung-ipad-v1';
-const ASSETS=['./','./index.html','./style.css','./app.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+const CACHE='wochenplanung-ipad-v2';
+const ASSETS=['./','./index.html','./style.css','./app.js','./pdf.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(names=>Promise.all(names.filter(name=>name.startsWith('wochenplanung-ipad-')&&name!==CACHE).map(name=>caches.delete(name)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',event=>{

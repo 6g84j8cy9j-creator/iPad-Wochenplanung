@@ -62,3 +62,31 @@ DATENSCHUTZ
 - Es erfolgt keine Registrierung von Kalenderdaten auf GitHub Pages.
 - Der Host kann technische Zugriffsprotokolle beim Abruf der Programmdateien haben.
 - Nie ein persönliches JSON-Backup ins öffentliche Repository hochladen.
+
+====================================================
+UPDATE 1.1 – PDF auf dem iPad
+====================================================
+Wenn die PDF-Schaltflaeche in der Home-Bildschirm-App nicht reagiert,
+aktualisiere die App-Dateien im gleichen GitHub-Repository:
+- index.html
+- app.js
+- style.css
+- sw.js
+- manifest.webmanifest
+- pdf.js  (NEU, muss mit hochgeladen werden)
+- icon-192.png / icon-512.png
+
+In GitHub die vorhandenen Dateien ersetzen/ueberschreiben und die neue
+Datei pdf.js im Stammverzeichnis hinzugefuegen. Danach Safari neu laden,
+PWA schliessen und erneut oeffnen. Bei Bedarf noch einmal wiederholen,
+damit die aktualisierte Offline-Version im Cache aktiv wird.
+
+Im Kalender "PDF erstellen" waehlen. Auf iPadOS erscheint moeglichst
+der Teilen-Dialog mit "In Dateien sichern". Wenn kein Teilen-Dialog
+verfuegbar ist, versucht die Anwendung einen PDF-Download.
+
+Der PDF-Inhalt wird direkt auf dem iPad erstellt. Keine Termine werden
+zum Erstellen des PDFs an GitHub oder einen anderen Server geschickt.
+
+Die lokalen Kalenderdaten werden bei einem normalen Versions-Update
+nicht geloescht. Vor dem Update ist ein JSON-Backup empfohlen.

@@ -83,7 +83,7 @@ async function printCalendar(){
   // In der iPad-Home-Bildschirm-App wird window.print() häufig nicht unterstützt.
   // Das echte PDF wird lokal erzeugt und im nativen Teilen-Menü gespeichert.
   if(navigator.canShare?.({files:[file]}) && navigator.share){
-   try{await navigator.share({files:[file],title:filename})}catch(err){if(err?.name!=='AbortError')throw err}
+   try{await navigator.share({files:[file]})}catch(err){if(err?.name!=='AbortError')throw err}
   }else{
    const url=URL.createObjectURL(file),a=document.createElement('a');
    a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();

@@ -90,3 +90,5 @@ zum Erstellen des PDFs an GitHub oder einen anderen Server geschickt.
 
 Die lokalen Kalenderdaten werden bei einem normalen Versions-Update
 nicht geloescht. Vor dem Update ist ein JSON-Backup empfohlen.
+
+UPDATE 1.2: Beim PDF-Teilen wird nur noch die PDF-Datei übergeben (kein zusaetzlicher Titel, der von iPadOS als Textdatei gespeichert werden kann). Nach dem Hochladen die PWA schliessen und neu starten.
